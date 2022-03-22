@@ -83,3 +83,60 @@ section {
 .projects {
     background-color: rgb(46, 72, 151);
 }
+.projects__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects__title {
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding-bottom:20px;
+}
+.projects__items {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    gap:10px;
+}
+.project-tile {
+    background-color: #0001;  
+    padding: 5px 5px 15px 5px; 
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #3336;
+}
+.project-tile__img {
+    box-shadow: 5px 5px 10px #333;
+    border-radius: 3px;
+}
+.project-tile__text {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top: 20px;
+    color: #ccc;
+}
+.project-tile__title {
+    text-align: center;
+    font-size: 1.3em;
+    text-shadow: 2px 2px 3px #333;
+}
+.project-tile__features {
+    padding-left: 20px;
+    font-size: .95em;
+    color:#ccc;
+}
+.project-tile__link {
+    color: #aaa;
+    text-decoration: dotted underline 1px;
+    text-underline-offset: 0.1em;
+    transition: .4s;
+}
+.project-tile__link:hover {
+    text-decoration:none;
+    color: #fff;
+}
+.project-tile__link:hover::after {
+    content: " →";
+}
