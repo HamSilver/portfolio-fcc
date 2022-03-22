@@ -14,7 +14,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <nav class="header__nav">
+                <nav class="header__nav" id="navbar">
                     <ul class="menu">
                         <li class="menu__item"><a class="menu__link" href="#welcome-section">About</a></li>
                         <li class="menu__item"><a class="menu__link" href="#projects">Projects</a></li>
@@ -98,7 +98,23 @@
         </section>
 
         <section class="contact" id="contact">
-
+            <div class="container">
+                <div class="contact__content">
+                    <h2 class="contact__title">Contact me</h2>
+                    <form class="contact__form" autocomplete="off" action="#dummy-action">
+                        <input autocomplete="false" name="hidden" type="text" class="hidden">
+                        <input class="contact__input-field" name="email" type="email" id="email" placeholder="E-mail"
+                            autocomplete="false" onfocus="if (this.hasAttribute('readonly')) {
+                                this.removeAttribute('readonly');
+                                // fix for mobile safari to show virtual keyboard
+                                this.blur();    this.focus();  }" />
+                        <input class="contact__input-field" name="tel" type="tel" id="tel" placeholder="Phone"
+                            autocomplete="off" />
+                        <textarea name="msg" id="msg" class="contact__msg" rows="2" placeholder="Message"></textarea>
+                        <button class="contact__btn">Send message</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <footer class="footer">
