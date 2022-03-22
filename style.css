@@ -8,6 +8,22 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.link {
+    position: relative;
+    color: #aaa;
+    text-underline-offset: 0.1em;
+    transition: .4s;
+    text-decoration: dotted underline 1px;
+}
+.link:hover {
+    text-decoration:none;
+    color: #fff;
+}
+.link:hover::after {
+    position: absolute;
+    right:-20px;
+    content: " →";
+}
 .wrapper {
     width:100%;
     margin: 0;
@@ -136,19 +152,6 @@ section {
     font-size: .95em;
     color:#ccc;
 }
-.project-tile__link {
-    color: #aaa;
-    text-decoration: dotted underline 1px;
-    text-underline-offset: 0.1em;
-    transition: .4s;
-}
-.project-tile__link:hover {
-    text-decoration:none;
-    color: #fff;
-}
-.project-tile__link:hover::after {
-    content: " →";
-}
 .contact {
     background-color: #2f3749;
 }
@@ -181,6 +184,7 @@ section {
 .contact__msg,
 .contact__input-field {
     font-size: 16px; 
+    font-family: inherit;
     width: 300px;
     border-radius: 3px;
     outline: none;
@@ -214,8 +218,45 @@ input:-webkit-autofill:active {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;   
     font-size: 16px; 
+    font-family: inherit;
 }
 .contact__btn:hover {
     background: linear-gradient(#9a9,#efe,#9a9);
     transform: scale(1.02);
+}
+.footer {
+    background-color: rgb(54, 63, 70);
+    padding: 10px;
+    color:#ccc;
+    box-shadow: -2px 0 5px 5px #0003;
+}
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:50px;
+}
+.link--email::before {
+    content: url('https://api.iconify.design/codicon/mail.svg?color=%23aaa&width=20&height=20');
+    position: absolute;
+    left: -23px;
+    top:1px;
+}
+.link--github::before {
+    content: url('https://api.iconify.design/bxl/github.svg?color=%23aaa&width=20&height=20');
+    position: absolute;
+    left: -23px;
+    top:1px;
+}
+.link--telegram::before {
+    content: url('https://api.iconify.design/cib/telegram-plane.svg?color=%23aaa&width=18&height=18');
+    position: absolute;
+    left: -23px;
+    top:2px;
+}
+.link--tel::before {
+    content: url('https://api.iconify.design/fluent/call-24-regular.svg?color=%23aaa&width=20&height=20');
+    position: absolute;
+    left: -21px;
+    top:2px;
 }
