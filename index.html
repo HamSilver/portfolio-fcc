@@ -13,12 +13,12 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="conteiner">
+            <div class="container">
                 <nav class="header__nav">
                     <ul class="menu">
-                        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Projects</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Contact me</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#welcome-section">About</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#projects">Projects</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#contact">Contact me</a></li>
                     </ul>
                 </nav>
             </div>
@@ -26,19 +26,24 @@
 
         <section class="welcome-section" id="welcome-section">
             <div class="container">
-                <img src="./assets/img/retrowave_sq.jpg" alt="My foto" class="welcome-section__img">
-                <div class="welcome-section__divider"></div>
-                <h1 class="welcome-section__title">Stanislav Kolpakov</h1>
-                <p class="welcome-section__description">Full stack developer</p>
+                <div class="welcome-section__content">
+                    <img class="welcome-section__img" src="./assets/img/retrowave_sq.jpg" alt="My foto">
+                    <div class="welcome-section__text">
+                        <h1 class="welcome-section__title">Stanislav Kolpakov</h1>
+                        <p class="welcome-section__description">Full stack developer</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="projects" id="projects">
             <div class="container">
                 <h2>My projects:</h2>
-                <div class="projects__item project-tile"></div>
-                <div class="projects__item project-tile"></div>
-                <div class="projects__item project-tile"></div>
+                <div class="projects__items">
+                    <div class="projects__item project-tile"></div>
+                    <div class="projects__item project-tile"></div>
+                    <div class="projects__item project-tile"></div>
+                </div>
             </div>
         </section>
 
